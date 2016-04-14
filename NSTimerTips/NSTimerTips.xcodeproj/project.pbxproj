@@ -12,6 +12,8 @@
 		1827CD1D1CBE7224008C8F4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1827CD1B1CBE7224008C8F4F /* Main.storyboard */; };
 		1827CD1F1CBE7224008C8F4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1827CD1E1CBE7224008C8F4F /* Assets.xcassets */; };
 		1827CD221CBE7224008C8F4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1827CD201CBE7224008C8F4F /* LaunchScreen.storyboard */; };
+		1827CD2A1CBE74B9008C8F4F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827CD291CBE74B9008C8F4F /* SecondViewController.swift */; };
+		1827CD2E1CBE7F3E008C8F4F /* NSTimer+FTExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827CD2D1CBE7F3E008C8F4F /* NSTimer+FTExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		1827CD1E1CBE7224008C8F4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1827CD211CBE7224008C8F4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1827CD231CBE7224008C8F4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1827CD291CBE74B9008C8F4F /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		1827CD2D1CBE7F3E008C8F4F /* NSTimer+FTExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimer+FTExtension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				1827CD171CBE7224008C8F4F /* AppDelegate.swift */,
 				1827CD191CBE7224008C8F4F /* ViewController.swift */,
+				1827CD291CBE74B9008C8F4F /* SecondViewController.swift */,
+				1827CD2D1CBE7F3E008C8F4F /* NSTimer+FTExtension.swift */,
 				1827CD1B1CBE7224008C8F4F /* Main.storyboard */,
 				1827CD1E1CBE7224008C8F4F /* Assets.xcassets */,
 				1827CD201CBE7224008C8F4F /* LaunchScreen.storyboard */,
@@ -135,6 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1827CD2E1CBE7F3E008C8F4F /* NSTimer+FTExtension.swift in Sources */,
+				1827CD2A1CBE74B9008C8F4F /* SecondViewController.swift in Sources */,
 				1827CD1A1CBE7224008C8F4F /* ViewController.swift in Sources */,
 				1827CD181CBE7224008C8F4F /* AppDelegate.swift in Sources */,
 			);
