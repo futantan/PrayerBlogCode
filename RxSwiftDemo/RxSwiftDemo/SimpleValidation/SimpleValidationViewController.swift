@@ -33,16 +33,17 @@ class SimpleValidationViewController: UIViewController {
         
         // 创建 Observable 表示 username 是否合法（不少于5个字符）
         let usernameValid = usernameTextField.rx_text
-            .debug("aaa")
             .map { $0.characters.count >= minimalUsernameLength }
             .shareReplay(1)
         
         // 创建 Observable 表示 passwordValid 是否合法（不少于5个字符）
         let passwordValid = passwordTextField.rx_text
             .map { $0.characters.count >= minimalUsernameLength }
+            .shareReplay(1)
         
         // 将 usernameValid 绑定到 usernameValidLabel 的 hidden 属性
         usernameValid
+            .debug("set")
             .bindTo(usernameValidLabel.rx_hidden)
             .addDisposableTo(disposeBag)
 
@@ -56,10 +57,10 @@ class SimpleValidationViewController: UIViewController {
             .bindTo(passwordValidLabel.rx_hidden)
             .addDisposableTo(disposeBag)
         
-        // 由 usernameValid 和 usernameValid 共同决定 doSomethingButton 的 enable 状态
-//        Observable.combineLatest(usernameValid, usernameValid) { $0 && $1 }
-//            .bindTo(doSomethingButton.rx_enabled)
-//            .addDisposableTo(disposeBag)
+        // 由 usernameValid 和 passwordValid 共同决定 doSomethingButton 的 enable 状态
+        Observable.combineLatest(usernameValid, passwordValid) { $0 && $1 }
+            .bindTo(doSomethingButton.rx_enabled)
+            .addDisposableTo(disposeBag)
         
         // button 的点击事件
         doSomethingButton.rx_tap

@@ -12,6 +12,9 @@
 		1813D4151CD8961900DA87BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1813D4131CD8961900DA87BD /* Main.storyboard */; };
 		1813D4171CD8961900DA87BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1813D4161CD8961900DA87BD /* Assets.xcassets */; };
 		1813D41A1CD8961900DA87BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1813D4181CD8961900DA87BD /* LaunchScreen.storyboard */; };
+		183808881D00771A00FC3AB1 /* GeolocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183808871D00771A00FC3AB1 /* GeolocationViewController.swift */; };
+		1838088A1D00773700FC3AB1 /* GeolocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183808891D00773700FC3AB1 /* GeolocationService.swift */; };
+		183808A01D0159DB00FC3AB1 /* Geolocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1838089F1D0159DB00FC3AB1 /* Geolocation.storyboard */; };
 		18BEFEEB1CD8B6770039C361 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEFEEA1CD8B6770039C361 /* CalculatorViewController.swift */; };
 		18BEFEED1CD8B6930039C361 /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BEFEEC1CD8B6930039C361 /* Calculator.storyboard */; };
 		18BEFEF01CD8C5FD0039C361 /* SimpleValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEFEEF1CD8C5FD0039C361 /* SimpleValidationViewController.swift */; };
@@ -26,6 +29,9 @@
 		1813D4161CD8961900DA87BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1813D4191CD8961900DA87BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1813D41B1CD8961900DA87BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		183808871D00771A00FC3AB1 /* GeolocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeolocationViewController.swift; sourceTree = "<group>"; };
+		183808891D00773700FC3AB1 /* GeolocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeolocationService.swift; sourceTree = "<group>"; };
+		1838089F1D0159DB00FC3AB1 /* Geolocation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Geolocation.storyboard; sourceTree = "<group>"; };
 		18BEFEEA1CD8B6770039C361 /* CalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		18BEFEEC1CD8B6930039C361 /* Calculator.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calculator.storyboard; sourceTree = "<group>"; };
 		18BEFEEF1CD8C5FD0039C361 /* SimpleValidationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleValidationViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +75,7 @@
 			children = (
 				18BEFEE91CD8A7F40039C361 /* Calculator */,
 				18BEFEEE1CD8C4790039C361 /* SimpleValidation */,
+				183808861D0076FE00FC3AB1 /* Geolocation */,
 				1813D40F1CD8961900DA87BD /* AppDelegate.swift */,
 				1813D4131CD8961900DA87BD /* Main.storyboard */,
 				1813D4161CD8961900DA87BD /* Assets.xcassets */,
@@ -76,6 +83,16 @@
 				1813D41B1CD8961900DA87BD /* Info.plist */,
 			);
 			path = RxSwiftDemo;
+			sourceTree = "<group>";
+		};
+		183808861D0076FE00FC3AB1 /* Geolocation */ = {
+			isa = PBXGroup;
+			children = (
+				183808871D00771A00FC3AB1 /* GeolocationViewController.swift */,
+				183808891D00773700FC3AB1 /* GeolocationService.swift */,
+				1838089F1D0159DB00FC3AB1 /* Geolocation.storyboard */,
+			);
+			path = Geolocation;
 			sourceTree = "<group>";
 		};
 		18BEFEE91CD8A7F40039C361 /* Calculator */ = {
@@ -148,6 +165,11 @@
 				TargetAttributes = {
 					1813D40B1CD8961900DA87BD = {
 						CreatedOnToolsVersion = 7.3;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -175,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1813D41A1CD8961900DA87BD /* LaunchScreen.storyboard in Resources */,
+				183808A01D0159DB00FC3AB1 /* Geolocation.storyboard in Resources */,
 				18BEFEF51CD8CA700039C361 /* SimpleValidation.storyboard in Resources */,
 				1813D4171CD8961900DA87BD /* Assets.xcassets in Resources */,
 				18BEFEED1CD8B6930039C361 /* Calculator.storyboard in Resources */,
@@ -237,7 +260,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1838088A1D00773700FC3AB1 /* GeolocationService.swift in Sources */,
 				18BEFEEB1CD8B6770039C361 /* CalculatorViewController.swift in Sources */,
+				183808881D00771A00FC3AB1 /* GeolocationViewController.swift in Sources */,
 				1813D4101CD8961900DA87BD /* AppDelegate.swift in Sources */,
 				18BEFEF01CD8C5FD0039C361 /* SimpleValidationViewController.swift in Sources */,
 			);
